@@ -22,7 +22,7 @@ public class Main {
         System.out.println("_________________");
 
         /*
-        System.out.println(FilterModule.filter(list,
+        System.out.println(FilterModule.filter(list,1
                 FilterModule.DEPARTURE_DATE_IS_BEFORE_NOW,
                 FilterModule.TRANSFER_MORE_THEN_TWO_HOURS,
                 FilterModule.WRONG_ARRIVAL_DATE));
