@@ -46,14 +46,14 @@ public class FilterModule {
 
     public static final FilterRule TRANSFER_MORE_THEN_TWO_HOURS = new FilterRule<Flight>("transferMoreThanTwoHours",
             flight -> {
-                var segmentsCalculate = flight
+                Duration segmentsCalculate = flight
                         .getSegments()
                         .stream()
                         .map(x -> Duration.between(x.getDepartureDate(), x.getArrivalDate()))
                         .reduce(Duration::plus)
                         .get();
 
-                var flightCalculate = Duration.between(flight.getSegments().get(0).getDepartureDate(),
+                Duration flightCalculate = Duration.between(flight.getSegments().get(0).getDepartureDate(),
                                 flight.getSegments().get(flight.getSegments().size() - 1).getArrivalDate());
 
                 return flightCalculate
