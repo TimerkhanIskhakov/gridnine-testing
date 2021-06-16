@@ -58,7 +58,7 @@ public class FilterModule {
 
                 return flightCalculate
                         .minus(segmentsCalculate)
-                        .compareTo(Duration.ofHours(2)) >= 0;
+                        .compareTo(Duration.ofHours(2)) > 0;
             });
 
     public static <T> List<T> filter (final List<T> list, Predicate<T>... predicates) {
